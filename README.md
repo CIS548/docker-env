@@ -13,7 +13,6 @@ Note: This project is in **alpha** stage, meaning that it is usable, but will be
 3. Run `docker-compose build mcit`. This will build the docker image whose `/vagrant` folder will be in sync with your current folder (course project folder)
 4. Run `docker-compose run mcit bash`. You should now be inside your docker image, with current folder at `/vagrant`.
 5. Run `ls` to make sure that `docker-setup.sh` is here.
-6. Run `./docker-setup.sh`. This might take 20 minutes to finish.
 
 #### All Future Log-ins
 Just open your course projects folder, and run `docker-compose run mcit bash`.
