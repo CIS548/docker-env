@@ -33,3 +33,5 @@ apt-get install -y tmux
 
 apt-get install -y make
 apt-get install -y gcc
+apt-get install -y git
+apt-get install python3.8
