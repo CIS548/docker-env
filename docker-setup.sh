@@ -42,3 +42,9 @@ apt-get install -y tmux
 
 apt-get install -y make
 apt-get install -y gcc
+
+# prevent errors about no dialog installed when attempting to use apt inside container
+apt-get install -y dialog
+
+# install manpages
+apt-get install -y man man-db manpages-posix manpages-dev manpages-posix-dev
