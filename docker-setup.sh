@@ -42,7 +42,7 @@ apt-get install -y tmux
 
 apt-get install -y make
 apt-get install -y gcc
-apt-get install python3.8
+apt-get install -y sudo
 
 # prevent errors about no dialog installed when attempting to use apt inside container
 apt-get install -y dialog
