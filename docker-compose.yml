@@ -2,5 +2,6 @@ version: '3.8'
 services:
   mcit:
     build: .
+    image: cis380/docker-env
     volumes:
       - .:/vagrant
