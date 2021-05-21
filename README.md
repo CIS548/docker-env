@@ -17,7 +17,7 @@ Note: This project is in **alpha** stage, meaning that it is usable, but will be
 1. Run `docker pull cis380/docker-env` to will pull the docker image from Docker Hub repository.
 1. Run `docker-compose run mcit bash` to launch a Docker Container with `/vagrant` folder synchornized with your current folder (course project folder).
 
-You should now be inside your docker image, with current folder at `/vagrant`. 
+You should now be inside your docker image, with current folder at `/vagrant`.
 
 You will log into the container as user `cit595` with password `mcit`.
 
