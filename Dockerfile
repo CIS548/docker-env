@@ -13,16 +13,12 @@ COPY docker-setup.sh .
 RUN chmod +x docker-setup.sh
 RUN ./docker-setup.sh
 
-RUN mkdir /vagrant
-WORKDIR /vagrant
-
 # Setting up cit595 as the user 
-# https://github.com/CIS380/docker-env/wiki/Add-non-root-user
 ARG GID=1000
 ARG UID=1000
 RUN addgroup --gid $GID cit595
 RUN useradd --system --create-home --shell /bin/bash --groups sudo -p "$(openssl passwd -1 mcit)" --uid $UID --gid $GID cit595
-RUN chown -R cit595:cit595 /vagrant
 RUN cp /root/.vimrc /home/cit595/.vimrc
 RUN chown cit595:cit595 /home/cit595/.vimrc
 USER cit595
+WORKDIR /home/cit595/
