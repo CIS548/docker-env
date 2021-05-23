@@ -1,6 +1,6 @@
 # Docker-env
 
-Doceker Image in DockerHub [(Link)](https://hub.docker.com/r/cis380/docker-env)
+Doceker Image in DockerHub [(Link)](https://hub.docker.com/r/cis548/docker-env)
 
 Note: This project is in **alpha** stage, meaning that it is usable, but will be going through constant updates.
 
@@ -19,7 +19,7 @@ Note: This project is in **alpha** stage, meaning that it is usable, but will be
 
 ### First-time Setup
 
-1. Run `docker pull cis380/docker-env` to will pull the docker image from Docker Hub repository.
+1. Run `docker pull cis548/docker-env` to will pull the docker image from Docker Hub repository.
 1. Run `docker-compose run mcit bash` to launch a Docker Container with `/vagrant` folder synchornized with your current folder (course project folder).
 
 You should now be inside your docker image, with current folder at `/vagrant`.
