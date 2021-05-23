@@ -4,6 +4,11 @@ Doceker Image in DockerHub [(Link)](https://hub.docker.com/r/cis380/docker-env)
 
 Note: This project is in **alpha** stage, meaning that it is usable, but will be going through constant updates.
 
+## Push to DockerHub
+
+- `docker build -t cis548/docker-env .`
+- `docker push cis548/docker-env`
+
 ## Usage
 
 ### Preparations
