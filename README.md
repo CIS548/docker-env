@@ -49,6 +49,8 @@ If we use the bare-mental `docker` to have the samilar virtual machine, you have
 ```
 docker run -it --rm -v `pwd`:/home/cit595 cis548/docker-env
 ```
+If we use `docker-compose`, it runs container with `-it` by default. The volume mounting is configed in `docker-compose.yml`. So we only need to call `docker-compose run --rm cis548/docker-env`.
+
 This is why we choose to use `docker-compose`, but the overhead is you have to prepare a `docker-compose.yml` file.
 
 ## Resources
