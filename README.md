@@ -34,7 +34,7 @@ Just open your course projects folder, and run `docker-compose run mcit bash`.
 ### Multiple Sessions
 
 To establish multiple sesssion to the same
- container, call `docker exec -it [container_id] bash` after booting the first window with `docker-compose run mcit bash`.
+ container, call `docker exec -it [container_id] bash` after booting the first window with `docker-compose run mcit`.
 
 ### About `docker-compose`
 
