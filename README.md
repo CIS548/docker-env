@@ -20,8 +20,8 @@ Note: This project is in **alpha** stage, meaning that it is usable, but will be
 
 1. Run `docker pull cis548/docker-env` to will pull the docker image from Docker Hub repository.
 1. Run `docker-compose run --rm mcit` to launch a Docker Container. 
-1. `--rm` will clean up the container when it is finished.
-3. The home directory `/home/cit595`, also known as `~`, is synchornized with the folder, where you put the `docker-compose.yml`, in your Host System.
+  - `--rm` will clean up the container when it is finished.
+  - The home directory `/home/cit595`, also known as `~`, is synchornized with the folder, where you put the `docker-compose.yml`, in your Host System.
 
 You should now be inside your docker image, with current folder at `/homw/cit595`. You can use `pwd` to check.
 
