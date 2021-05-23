@@ -36,7 +36,8 @@ apt-get install -y git-all
 apt-get install -y curl
 apt-get install -y vim
 # # PlugInstall can be comment out if you are in win10 and vagrant quit during the initilization.
-vim -c PlugInstall -c qa
+vim -es -u ~/.vimrc +PlugInstall +qa
+
 
 apt-get install -y tmux
 
