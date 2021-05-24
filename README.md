@@ -1,14 +1,5 @@
 # Docker-env
 
-Doceker Image in DockerHub [(Link)](https://hub.docker.com/r/cis548/docker-env)
-
-Note: This project is in **alpha** stage, meaning that it is usable, but will be going through constant updates.
-
-## Push to DockerHub
-
-- `docker build -t cis548/docker-env .`
-- `docker push cis548/docker-env`
-
 ## Usage
 
 ### Preparations
@@ -53,6 +44,12 @@ If we use `docker-compose`, it runs container with `-it` by default. The volume 
 
 This is why we choose to use `docker-compose`, but the overhead is you have to prepare a `docker-compose.yml` file.
 
+## Push to DockerHub
+
+Doceker Image in DockerHub [(Link)](https://hub.docker.com/r/cis548/docker-env)
+
+- `docker build -t cis548/docker-env .`
+- `docker push cis548/docker-env`
 ## Resources
 
 - [Docker Tutorial for Beginners - A Full DevOps Course on How to Run Applications in Containers](https://www.youtube.com/watch?v=fqMOX6JJhGo)
