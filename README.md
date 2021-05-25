@@ -1,14 +1,5 @@
 # Docker-env
 
-Doceker Image in DockerHub [(Link)](https://hub.docker.com/r/cis548/docker-env)
-
-Note: This project is in **alpha** stage, meaning that it is usable, but will be going through constant updates.
-
-## Push to DockerHub
-
-- `docker build -t cis548/docker-env .`
-- `docker push cis548/docker-env`
-
 ## Usage
 
 ### Preparations
@@ -44,12 +35,22 @@ The following is the offical definition of docker-compose:
 
 In CIT 595, we only use `docker-compose` to start one service which is your virtual machine. But `docker-compose` make the command consice and convient because we can predefine the configuration in `docker-compose.yml`.
 
-If we use the bare-mental `docker` to have the samilar virtual machine, you have to run 
+If we use the bare-mental `docker` to start the container with same configuration, you have to run 
 
 ```
 docker run -it --rm -v `pwd`:/home/cit595 cis548/docker-env
 ```
+If we use `docker-compose`, it runs container with `-it` by default. The volume mounting is configed in `docker-compose.yml`. So we only need to call `docker-compose run --rm cis548/docker-env`.
+
 This is why we choose to use `docker-compose`, but the overhead is you have to prepare a `docker-compose.yml` file.
+
+## (For TAs) Push Image to DockerHub
+
+Docker Image in DockerHub [(Link)](https://hub.docker.com/r/cis548/docker-env)
+
+- `docker build -t cis548/docker-env .`
+- `docker push cis548/docker-env`
+
 
 ## Resources
 
