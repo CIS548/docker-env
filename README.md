@@ -35,14 +35,29 @@ The following is the offical definition of docker-compose:
 
 In CIT 595, we only use `docker-compose` to start one service which is your virtual machine. But `docker-compose` make the command consice and convient because we can predefine the configuration in `docker-compose.yml`.
 
-If we use the bare-mental `docker` to start the container with same configuration, you have to run 
+If we use the bare-mental `docker` to start the container with same configuration, you have to run
 
-```
+```{bash}
 docker run -it --rm -v `pwd`:/home/cit595 cis548/docker-env
 ```
+
 If we use `docker-compose`, it runs container with `-it` by default. The volume mounting is configed in `docker-compose.yml`. So we only need to call `docker-compose run --rm cis548/docker-env`.
 
 This is why we choose to use `docker-compose`, but the overhead is you have to prepare a `docker-compose.yml` file.
+
+### Set up Vim
+
+[Vim](https://www.vim.org/) is installed in the Docker container. We prepared a Vim configure file for students who would like to explore. The configuration file helps to install plug-ins and theme to make Vim more user-friendly and powerful. To use the configuration file, first use `docker-compose run --rm cis548/docker-env` to get into the container. Then do the following two steps.
+
+```{bash}
+# Step 1: Download the configuration file from CIS548
+wget -O .vimrc https://raw.githubusercontent.com/CIS548/gists/master/example_vimrc.txt
+
+# Step2: Update Vim based on the configuration files
+vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
+```
+
+Now you are ready for Vim!
 
 ## (For TAs) Push Image to DockerHub
 
@@ -50,7 +65,6 @@ Docker Image in DockerHub [(Link)](https://hub.docker.com/r/cis548/docker-env)
 
 - `docker build -t cis548/docker-env .`
 - `docker push cis548/docker-env`
-
 
 ## Resources
 

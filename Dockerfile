@@ -17,6 +17,7 @@ ARG GID=1000
 ARG UID=1000
 RUN addgroup --gid $GID cit595
 RUN useradd --system --create-home --shell /bin/bash --groups sudo -p "$(openssl passwd -1 mcit)" --uid $UID --gid $GID cit595
+RUN wget -O /root/.vimrc https://raw.githubusercontent.com/CIS548/gists/master/example_vimrc.txt
 RUN cp /root/.vimrc /home/cit595/.vimrc
 RUN chown cit595:cit595 /home/cit595/.vimrc
 USER cit595

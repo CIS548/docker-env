@@ -8,12 +8,12 @@ apt-get install -y apt-utils
 apt-get install -y software-properties-common
 apt-get install -y gnupg
 
+
 # install llvm
 apt-get -y upgrade
 apt-get install -y wget
 
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
-wget -O /root/.vimrc https://raw.githubusercontent.com/CIS548/gists/master/example_vimrc.txt
 
 add-apt-repository ppa:jonathonf/vim
 apt-add-repository "deb http://apt.llvm.org/focal/ llvm-toolchain-focal main"
@@ -35,7 +35,7 @@ apt-get install -y valgrind
 apt-get install -y git-all
 apt-get install -y curl
 apt-get install -y vim
-vim -es -u ~/.vimrc +PlugInstall +qa
+# vim -c PlugInstall -c qa
 
 apt-get install -y tmux
 
