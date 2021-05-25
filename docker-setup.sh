@@ -13,7 +13,7 @@ apt-get -y upgrade
 apt-get install -y wget
 
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
-wget -O /root/.vimrc https://raw.githubusercontent.com/CIS380/gists/master/example_vimrc.txt
+wget -O /root/.vimrc https://raw.githubusercontent.com/CIS548/gists/master/example_vimrc.txt
 
 add-apt-repository ppa:jonathonf/vim
 apt-add-repository "deb http://apt.llvm.org/focal/ llvm-toolchain-focal main"
