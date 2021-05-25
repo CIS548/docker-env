@@ -1,4 +1,0 @@
-cd 
-pwd
-pwd
-pwd

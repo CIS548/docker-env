@@ -1,0 +1,6 @@
+*
+!.gitignore
+!Dockerfile
+!README.md
+!docker-setup.sh
+!docker-compose.yml

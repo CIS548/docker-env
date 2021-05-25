@@ -12,7 +12,6 @@ RUN sed -i 's,^path-exclude=/usr/share/man/,#path-exclude=/usr/share/man/,' /etc
 COPY docker-setup.sh .
 RUN chmod +x docker-setup.sh
 RUN ./docker-setup.sh
-
 # Setting up cit595 as the user 
 ARG GID=1000
 ARG UID=1000
