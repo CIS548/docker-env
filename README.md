@@ -9,6 +9,10 @@
 
 ### First-time Setup
 
+#### For AMD64 Architecture
+
+If your CPU is in AMD64 Architecture, in other words, if your CPU is not Apple M1, then do the following.
+
 1. Run `docker pull cis548/docker-env` to will pull the docker image from Docker Hub repository.
 1. Run `docker-compose run --rm mcit` to launch a Docker Container. 
   - `--rm` will clean up the container when it is finished.
@@ -17,6 +21,14 @@
 You should now be inside your docker image, with current folder at `/homw/cit595`. You can use `pwd` to check.
 
 You will log into the container as user `cit595` with password `mcit`. The password is used just in case you occationally need sudo previlege.
+
+#### For ARM64 Architecture
+
+If you are using a machine with Apple M1 CPU, you need to do a few extra steps to compile the docker image locally.
+
+1. Copy `Dockerfile` to your course projects folder along with `docker-compose.yml`
+2. Run `docker-compose build mcit` to compile the docker image locally.
+3. Follow For AMD64 Architecture section, starting from the second step. In other words, run `docker-compose run --rm mcit` to launch a Docker Container.
 
 ### All Future Log-ins
 
