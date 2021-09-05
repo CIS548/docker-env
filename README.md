@@ -53,13 +53,13 @@ If we use the bare-mental `docker` to start the container with same configuratio
 docker run -it --rm -v `pwd`:/home/cit595 cis548/docker-env
 ```
 
-If we use `docker-compose`, it runs container with `-it` by default. The volume mounting is configed in `docker-compose.yml`. So we only need to call `docker-compose run --rm cis548/docker-env`.
+If we use `docker-compose`, it runs container with `-it` by default. The volume mounting is configed in `docker-compose.yml` under `mcit` service. So we only need to call `docker-compose run --rm mcit`.
 
 This is why we choose to use `docker-compose`, but the overhead is you have to prepare a `docker-compose.yml` file.
 
 ### Set up Vim
 
-[Vim](https://www.vim.org/) is installed in the Docker container. We prepared a Vim configure file for students who would like to explore. The configuration file helps to install plug-ins and theme to make Vim more user-friendly and powerful. To use the configuration file, first use `docker-compose run --rm cis548/docker-env` to get into the container. Then do the following two steps.
+[Vim](https://www.vim.org/) is installed in the Docker container. We prepared a Vim configure file for students who would like to explore. The configuration file helps to install plug-ins and theme to make Vim more user-friendly and powerful. To use the configuration file, first use `docker-compose run --rm mcit` to get into the container. Then do the following two steps.
 
 ```{bash}
 # Step 1: Download the configuration file from CIS548
