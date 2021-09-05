@@ -32,7 +32,7 @@ If you are using a machine with Apple M1 CPU, you need to do a few extra steps t
 
 ### All Future Log-ins
 
-Just open your course projects folder, and run `docker-compose run mcit bash`.
+Just open your course projects folder, and run `docker-compose run --rm mcit`.
 
 ### Multiple Sessions
 
