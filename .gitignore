@@ -1,4 +1,5 @@
 *
+!CODEOWNERS
 !.gitignore
 !Dockerfile
 !README.md
