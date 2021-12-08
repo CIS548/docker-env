@@ -18,7 +18,7 @@ If your CPU is in AMD64 Architecture, in other words, if your CPU is not Apple M
   - `--rm` will clean up the container when it is finished.
   - The home directory `/home/cit595`, also known as `~`, is synchornized with the folder, where you put the `docker-compose.yml`, in your Host System.
 
-You should now be inside your docker image, with current folder at `/homw/cit595`. You can use `pwd` to check.
+You should now be inside your docker image, with current folder at `/home/cit595`. You can use `pwd` to check.
 
 You will log into the container as user `cit595` with password `mcit`. The password is used just in case you occationally need sudo previlege.
 
