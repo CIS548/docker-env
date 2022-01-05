@@ -75,8 +75,26 @@ Now you are ready for Vim!
 
 Docker Image in DockerHub [(Link)](https://hub.docker.com/r/cis548/docker-env)
 
-- `docker build -t cis548/docker-env .`
-- `docker push cis548/docker-env`
+We use `docker buildx` to generate images for AMD64 and ARM64 CPUs. The steps are as follows.
+
+1. Create a new builder. The default docker builder does not support multi-platform compiling, so we need to create a new one. Here we name it `mybuilder`.
+
+```bash
+docker buildx create --name mybuilder
+```
+
+2. Set `mybuilder` as the new default builder and double-check the change is in effect.
+
+```bash
+docker buildx use mybuilder
+docker buildx inspect --bootstrap
+```
+
+3. Build and push the images to `cis548/docker-env`. To push images to the Docker Hub reposiotry, make sure you have the right permissons to the repo.
+
+```bash
+docker buildx build . --platform=linux/amd64,linux/arm64/v8 -t cis548/docker-env --push
+```
 
 ## Resources
 
