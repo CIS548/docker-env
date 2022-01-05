@@ -96,6 +96,12 @@ docker buildx inspect --bootstrap
 docker buildx build . --platform=linux/amd64,linux/arm64/v8 -t cis548/docker-env --push
 ```
 
+4. To learn more, the following sections in [this YouTube video](https://www.youtube.com/watch?v=hWSHtHasJUI) gives a step-by-step demo. 
+
+  - [05:40](https://www.youtube.com/watch?v=hWSHtHasJUI&t=340s) - Buildx setup
+  - [06:46](https://www.youtube.com/watch?v=hWSHtHasJUI&t=406s) - Dockerhub repo setup
+  - [06:59](https://www.youtube.com/watch?v=hWSHtHasJUI&t=419s) - Building the images!
+
 ## Resources
 
 - [Docker Tutorial for Beginners - A Full DevOps Course on How to Run Applications in Containers](https://www.youtube.com/watch?v=fqMOX6JJhGo)
