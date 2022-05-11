@@ -102,6 +102,12 @@ docker buildx build . --platform=linux/amd64,linux/arm64/v8 -t cis548/docker-env
   - [06:46](https://www.youtube.com/watch?v=hWSHtHasJUI&t=406s) - Dockerhub repo setup
   - [06:59](https://www.youtube.com/watch?v=hWSHtHasJUI&t=419s) - Building the images!
 
+5. An example of running docker image with a specific platform
+
+```bash
+docker run -it --rm --platform linux/arm64 cis548/docker-env
+```
+
 ## Resources
 
 - [Docker Tutorial for Beginners - A Full DevOps Course on How to Run Applications in Containers](https://www.youtube.com/watch?v=fqMOX6JJhGo)
