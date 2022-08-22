@@ -2,50 +2,24 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-# install prereqs
-apt-get update
-apt-get install -y apt-utils
-apt-get install -y software-properties-common
-apt-get install -y gnupg
+# unminimize system (restore man pages)
+yes | unminimize
 
+# install packages
+apt install -y gdb valgrind clang clang-format make git curl vim man-db manpages-dev ca-certificates openssh-client tzdata zsh --no-install-recommends
 
-# install llvm
-apt-get -y upgrade
-apt-get install -y wget
+# configure timezone
+ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 
-wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
+# download vim config
+curl -o /root/.vimrc https://raw.githubusercontent.com/CIS548/gists/master/example_vimrc.txt
 
-add-apt-repository ppa:jonathonf/vim
-apt-add-repository "deb http://apt.llvm.org/focal/ llvm-toolchain-focal main"
+# download oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-apt-get update
-apt-get -y upgrade
-apt-get install -y emacs
-apt-get install -y clang-10
-apt-get install -y clang-format-10
+# change theme to *clean*
+sed -i s/^ZSH_THEME=".\+"$/ZSH_THEME=\"clean\"/g ~/.zshrc
 
-update-alternatives --install /usr/bin/clang clang /usr/bin/clang-10 100
-update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-10 100
-
-apt-get install -y gdb
-apt-get install -y lldb-3.8
-
-apt-get install -y valgrind
-
-apt-get install -y git-all
-apt-get install -y curl
-apt-get install -y vim
-# vim -c PlugInstall -c qa
-
-apt-get install -y tmux
-
-apt-get install -y make
-apt-get install -y gcc
-apt-get install -y sudo
-
-# prevent errors about no dialog installed when attempting to use apt inside container
-apt-get install -y dialog
-
-# install manpages
-apt-get install -y man man-db manpages-posix manpages-dev manpages-posix-dev
-apt-get install -y neofetch
+# add vscode config
+mkdir -p /root/.vscode-server/data/Machine
+echo {"terminal.integrated.defaultProfile.linux":"zsh"} > /root/.vscode-server/data/Machine/settings.json
