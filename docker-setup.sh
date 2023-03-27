@@ -36,6 +36,7 @@ apt-get install -y lldb-3.8
 apt-get install -y git-all
 apt-get install -y curl
 apt-get install -y sudo
+apt-get install -y net-tools
 
 # prevent errors about no dialog installed when attempting to use apt inside container
 apt-get install -y dialog
