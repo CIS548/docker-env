@@ -37,6 +37,9 @@ apt-get install -y git-all
 apt-get install -y curl
 apt-get install -y sudo
 apt-get install -y net-tools
+apt-get install -y traceroute
+apt-get install -y dnsutils
+apt-get install -y zip
 
 # prevent errors about no dialog installed when attempting to use apt inside container
 apt-get install -y dialog
@@ -44,3 +47,4 @@ apt-get install -y dialog
 # install manpages
 apt-get install -y man man-db manpages-posix manpages-dev manpages-posix-dev
 apt-get install -y neofetch
+
