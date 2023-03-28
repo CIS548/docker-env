@@ -2,7 +2,7 @@
 
 echo -n "Checking dependencies... "
 
-for name in gcc clang gdb valgrind git vim make sudo man
+for name in gcc clang gdb valgrind git vim make tmux net-tools zip tar sudo man
 do
   [[ $(which $name 2>/dev/null) ]] || { echo -en "\n$name needs to be installed. Use 'sudo apt-get install $name'";deps=1; }
 done
@@ -10,3 +10,4 @@ done
 
 # reference
 # https://stackoverflow.com/questions/33297857/how-to-check-dependency-in-bash-script
+
