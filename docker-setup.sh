@@ -12,7 +12,7 @@ apt-get install -y gnupg
 apt-get -y upgrade
 apt-get install -y wget
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
-apt-add-repository "deb http://apt.llvm.org/focal/ llvm-toolchain-focal main"
+apt-add-repository "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy main"
 
 # install text editors and terminals
 add-apt-repository ppa:jonathonf/vim
@@ -27,17 +27,19 @@ apt-get install -y tmux
 apt-get install -y gdb valgrind
 
 # install C stuff
-apt-get install -y gcc clang-10 clang-format-10 make
-update-alternatives --install /usr/bin/clang clang /usr/bin/clang-10 100
-update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-10 100
+apt-get install -y gcc clang clang-format make
+
+
+# network stuff
+apt-get install -y net-tools
+apt-get install iputils-ping
+apt-get install -y traceroute
 
 # install miscellaneous things I can't categorise
 apt-get install -y lldb-3.8
 apt-get install -y git-all
 apt-get install -y curl
 apt-get install -y sudo
-apt-get install -y net-tools
-apt-get install -y traceroute
 apt-get install -y dnsutils
 apt-get install -y zip
 

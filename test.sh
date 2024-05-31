@@ -2,7 +2,7 @@
 
 echo -n "Checking dependencies... "
 
-for name in gcc clang gdb valgrind git vim make tmux ifconfig unzip tar sudo man traceroute nslookup python3
+for name in gcc clang gdb valgrind git vim make tmux ifconfig unzip tar sudo man traceroute nslookup python3 curl
 do
   [[ $(which $name 2>/dev/null) ]] || { echo -en "\n$name needs to be installed. Use 'sudo apt-get install $name'";deps=1; }
 done

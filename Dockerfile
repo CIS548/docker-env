@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 # Remove diverted man binary to prevent man-pages being replaced with "minimized" message.
 # https://github.com/CIS380/docker-env/wiki/Install-man-page
