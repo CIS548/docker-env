@@ -93,7 +93,8 @@ docker buildx inspect --bootstrap
 3. Build and push the images to `cis548/docker-env`. To push images to the Docker Hub reposiotry, make sure you have the right permissons to the repo.
 
 ```bash
-docker buildx build . --platform=linux/amd64,linux/arm64/v8 -t cis548/docker-env --push
+docker buildx build . --platform=linux/amd64,linux/arm64/v8 -t cis548/docker-env:latest --push
+# change :latest to another tag if necessary
 ```
 
 4. To learn more, the following sections in [this YouTube video](https://www.youtube.com/watch?v=hWSHtHasJUI) gives a step-by-step demo. 
