@@ -6,3 +6,5 @@
 !docker-setup.sh
 !docker-compose.yml
 !test.sh
+!build-images.sh
+
