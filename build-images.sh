@@ -16,8 +16,4 @@ docker buildx use mybuilder
 docker buildx inspect --bootstrap
 
 # main build command: build and push images to DockerHub
-docker buildx build . --platform=linux/amd64,linux/arm64/v8 -t cis548/595-docker-env:$1 --push
-
-# build  arm64 only for quick development.  Uncomment the following line and comment out the main build command
-# docker buildx build . --platform=linux/arm64/v8 -t cis548/595-project3-docker-env:$1 --push
-
+docker buildx build . --platform=linux/amd64,linux/arm64/v8 -t cis548/docker-env:$1 --push
