@@ -7,6 +7,7 @@ apt-get update
 apt-get install -y apt-utils
 apt-get install -y software-properties-common
 apt-get install -y gnupg
+apt-get install -y openssh-client
 
 # install llvm
 apt-get -y upgrade
