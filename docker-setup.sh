@@ -31,15 +31,18 @@ apt-get install -y gcc clang-10 clang-format-10 make
 update-alternatives --install /usr/bin/clang clang /usr/bin/clang-10 100
 update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-10 100
 
+
+
 # install miscellaneous things I can't categorise
 apt-get install -y lldb-3.8
-apt-get install -y git-all
 apt-get install -y curl
 apt-get install -y sudo
 apt-get install -y net-tools
 apt-get install -y traceroute
 apt-get install -y dnsutils
 apt-get install -y zip
+# needed for git-from-source
+apt-get install -y autoconf libz-dev gettext asciidoc
 
 # prevent errors about no dialog installed when attempting to use apt inside container
 apt-get install -y dialog
@@ -48,3 +51,15 @@ apt-get install -y dialog
 apt-get install -y man man-db manpages-posix manpages-dev manpages-posix-dev
 apt-get install -y neofetch
 
+# install git from source
+curl https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.49.0.tar.gz > git-2.49.0.tar.gz
+tar -xvf git-2.49.0.tar.gz
+cd git-2.49.0
+make configure
+./configure --prefix=/usr
+make all
+sudo make install
+cd ..
+rm -f -r git-2.49.0
+# all of this is to make the default branch "main"
+git config --global init.defaultBranch main
